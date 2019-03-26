@@ -1,0 +1,60 @@
+.basket-wrapper {
+  width: 70%;
+  margin: 0 auto;
+
+  table {
+    margin-top: 1rem;
+    width: 100%;
+    border: 1px solid #333;
+    padding: 1rem;
+    border-radius: 3px;
+    border-spacing: 0 0.75rem;
+
+    thead {
+      .th-product {
+        width: 60%;
+        text-align: left;
+      }
+
+      .th-amount {
+        width: 20%;
+      }
+
+      .th-price {
+        width: 20%;
+      }
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    tbody {
+      border-spacing: 0 0.75rem;
+      border-collapse: separate;
+
+      .book {
+        margin: 0.5rem 0;
+
+        .td-product {
+          display: flex;
+          max-height: 3rem;
+
+          img {
+            max-width: 3rem;
+          }
+
+          article {
+            margin-left: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+          }
+        }
+      }
+    }
+  }
+}

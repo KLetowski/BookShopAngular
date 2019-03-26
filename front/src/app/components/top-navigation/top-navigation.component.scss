@@ -1,0 +1,12 @@
+.top-nav {
+  display: flex;
+  margin: 0 3rem;
+
+  a {
+    border-radius: 0;
+
+    .mat-icon {
+      margin-left: 0.25rem;
+    }
+  }
+}

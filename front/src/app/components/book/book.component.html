@@ -1,0 +1,29 @@
+<div ngClass="content">
+  <h3 ngClass="title">{{ book.title }}</h3>
+  <em ngClass="author">{{ book.author }}</em>
+  <div ngClass="book-details">
+    <div ngClass="img-wrapper">
+      <img [lazyLoad]="book.coverUrl" [offset]="100" [alt]="book.title" />
+    </div>
+    <div ngClass="book-info">
+      <span
+        >Pages count: <br />
+        {{ book.pages }}</span
+      >
+      <span
+        >Price: <br />
+        {{ book.price / 100 | currency: book.currency }}</span
+      >
+      <div ngClass="flex-bottom">
+        <button mat-raised-button color="primary" (click)="orderBook(book)">
+          <mat-icon>assignment</mat-icon>
+          order
+        </button>
+        <button mat-raised-button color="primary" (click)="addToBasket(book)">
+          <mat-icon>add_shopping_cart</mat-icon>
+          add to basket
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

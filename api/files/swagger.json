@@ -204,7 +204,7 @@
           "id",
           "title",
           "author",
-          "cover_url",
+          "coverUrl",
           "pages",
           "price",
           "currency"
@@ -222,7 +222,7 @@
             "type": "string",
             "description": "Book authors comma separated"
           },
-          "cover_url": {
+          "coverUrl": {
             "type": "string",
             "description": "Full path to image with cover"
           },
@@ -242,27 +242,27 @@
       },
       "Order": {
         "required": [
-          "order",
-          "first_name",
-          "last_name",
+          "books",
+          "firstName",
+          "lastName",
           "email",
-          "phone_number",
+          "phoneNumber",
           "address",
           "city",
-          "zip_code"
+          "zipCode"
         ],
         "properties": {
-          "order": {
+          "books": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/OrderElement"
             }
           },
-          "first_name": {
+          "firstName": {
             "type": "string",
             "description": "First name"
           },
-          "last_name": {
+          "lastName": {
             "type": "string",
             "description": "Last name"
           },
@@ -270,7 +270,7 @@
             "type": "string",
             "description": "Email address"
           },
-          "phone_number": {
+          "phoneNumber": {
             "type": "string",
             "description": "Phone number (9 digits)"
           },
@@ -282,7 +282,7 @@
             "type": "string",
             "description": "City"
           },
-          "zip_code": {
+          "zipCode": {
             "type": "string",
             "description": "Zip code (00-000 format)"
           }

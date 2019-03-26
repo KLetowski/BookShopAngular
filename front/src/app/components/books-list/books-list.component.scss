@@ -1,0 +1,21 @@
+.wrapper {
+  margin-top: 3rem;
+
+  .search {
+    display: block;
+    max-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .books-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 1rem 5rem;
+
+    .book {
+      flex-basis: 33.33%;
+      padding: 1rem;
+    }
+  }
+}

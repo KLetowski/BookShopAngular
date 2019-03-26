@@ -1,0 +1,22 @@
+<div ngClass="wrapper">
+  <mat-form-field [floatLabel]="'never'" ngClass="search">
+    <input
+      matInput
+      placeholder="Search book by any property"
+      (input)="handleBookSearch($event)"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <ul ngClass="books-list">
+    <li ngClass="book" *ngFor="let book of books" [accessKey]="book.id">
+      <book [book]="book"></book>
+    </li>
+  </ul>
+  <ngx-ui-loader></ngx-ui-loader>
+  <div
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="1000"
+    (scrolled)="fetchBooks(currentPageLoaded + 1)"
+  ></div>
+</div>
