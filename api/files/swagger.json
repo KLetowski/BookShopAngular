@@ -13,7 +13,9 @@
     "/book": {
       "get": {
         "summary": "List all books",
-        "tags": ["Book"],
+        "tags": [
+          "Book"
+        ],
         "parameters": [
           {
             "name": "page",
@@ -79,7 +81,9 @@
       ],
       "get": {
         "summary": "Book details",
-        "tags": ["Book"],
+        "tags": [
+          "Book"
+        ],
         "responses": {
           "200": {
             "description": "Single book",
@@ -104,7 +108,9 @@
     "/order": {
       "post": {
         "summary": "Order books from bookshop",
-        "tags": ["Order"],
+        "tags": [
+          "Order"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -283,7 +289,10 @@
         }
       },
       "OrderElement": {
-        "required": ["id", "quantity"],
+        "required": [
+          "id",
+          "quantity"
+        ],
         "properties": {
           "id": {
             "type": "integer",
