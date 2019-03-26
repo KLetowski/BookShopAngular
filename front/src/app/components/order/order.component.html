@@ -1,0 +1,100 @@
+<div ngClass="order-form">
+  <h3>Order</h3>
+
+  <form
+    (ngSubmit)="handleSubmitForm(orderForm.value)"
+    [formGroup]="orderForm"
+    novalidate
+  >
+    <div ngClass="wrapper">
+      <fieldset ngClass="contact">
+        <legend>
+          Contact
+        </legend>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Name"
+            type="text"
+            formControlName="firstName"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Surname"
+            type="text"
+            formControlName="lastName"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Contact number"
+            type="text"
+            formControlName="phoneNumber"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Email"
+            type="text"
+            formControlName="email"
+          />
+        </mat-form-field>
+      </fieldset>
+      <fieldset ngClass="address">
+        <legend>
+          Address
+        </legend>
+        <div ngClass="address-form" formGroupName="addressForm">
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Street"
+              type="text"
+              formControlName="street"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="House number"
+              type="text"
+              formControlName="houseNumber"
+            />
+          </mat-form-field>
+        </div>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="City"
+            type="text"
+            formControlName="city"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Post code"
+            type="text"
+            formControlName="zipCode"
+          />
+        </mat-form-field>
+      </fieldset>
+    </div>
+    <div ngClass="button-wrapper">
+      <previous-page-button></previous-page-button>
+
+      <button
+        [disabled]="orderForm.invalid || !book"
+        mat-raised-button
+        color="primary"
+        type="submit"
+      >
+        send
+      </button>
+    </div>
+  </form>
+</div>

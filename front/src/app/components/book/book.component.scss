@@ -1,0 +1,51 @@
+.content {
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .title {
+    margin-bottom: 0.5rem;
+  }
+
+  .author {
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .book-details {
+    display: flex;
+    margin-top: auto;
+
+    .img-wrapper {
+      flex: 1;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: bottom;
+      }
+    }
+
+    .book-info {
+      flex: 1;
+      margin-left: 1rem;
+      display: flex;
+      flex-direction: column;
+      font-size: 0.875rem;
+      line-height: 1.375;
+
+      .flex-bottom {
+        margin-top: auto;
+
+        button {
+          margin-top: 0.5rem;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

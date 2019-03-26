@@ -1,0 +1,48 @@
+<div ngClass="basket-wrapper">
+  <h3>Basket</h3>
+
+  <placeholder
+    message="No books in the basket"
+    *ngIf="basket.books.length === 0"
+  ></placeholder>
+  <table *ngIf="basket.books.length > 0">
+    <thead>
+      <tr>
+        <th ngClass="th-product">Product</th>
+        <th ngClass="th-amount align-center">Amount</th>
+        <th ngClass="th-price align-right">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ngClass="book" *ngFor="let book of basket.books">
+        <td ngClass="td-product">
+          <img [src]="book.coverUrl" [alt]="book.title" />
+          <article>
+            <h4>{{ book.title }}</h4>
+            <span>
+              {{ book.author }}
+            </span>
+          </article>
+        </td>
+        <td ngClass="align-center">
+          {{ book.quantity }}
+        </td>
+        <td ngClass="align-right">
+          {{ book.price / 100 | currency: book.currency }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div ngClass="button-wrapper">
+    <previous-page-button></previous-page-button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="button"
+      (click)="goToOrder()"
+    >
+      go to order
+    </button>
+  </div>
+</div>

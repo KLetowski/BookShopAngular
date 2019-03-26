@@ -1,0 +1,32 @@
+.order-form {
+  width: 60%;
+  margin: 0 auto;
+
+  form {
+    margin-top: 1rem;
+
+    .wrapper {
+      display: flex;
+
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        flex: 1;
+      }
+
+      .contact {
+        margin-right: 1.5rem;
+      }
+
+      .address {
+        margin-left: 1.5rem;
+
+        .address-form {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
